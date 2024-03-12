@@ -1,0 +1,51 @@
+﻿@model IEnumerable<CateringMS.Models.CateringOrder>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+
+<h2>Catering Orders</h2>
+
+<table id="cateringOrdersTable" class="display">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Today's Date</th>
+            <th>Order Due Date</th>
+            <th>Event Date</th>
+            <th>Event Time</th>
+            <th>Pick-up Location</th>
+            <th>Type of Event</th>
+            <th>Number of Guests</th>
+            <th>Pick-up Time</th>
+            <th>Delivery Method</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td>@order.full_name</td>
+                <td>@order.phone_number</td>
+                <td>@order.email</td>
+                <td>@order.todays_date.ToShortDateString()</td>
+                <td>@order.order_due_date.ToShortDateString()</td>
+                <td>@order.event_date.ToShortDateString()</td>
+                  <td>@order.event_time.ToString(@"hh\:mm\:ss")</td>
+                <td>@order.pickup_location</td>
+                <td>@order.event_type</td>
+                <td>@order.number_of_guests</td>
+                  <td>@order.pickup_time.ToString(@"hh\:mm\:ss")</td>
+                <td>@order.delivery_method</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    $(document).ready(function () {
+        $('#cateringOrdersTable').DataTable();
+    });
+</script>

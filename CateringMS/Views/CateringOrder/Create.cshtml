@@ -1,0 +1,150 @@
+﻿
+@{
+	Layout = null;
+}
+
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Catering Order Form a Responsive Widget Template :: w3layouts</title>
+	<!-- Meta tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Catering  Order Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements"
+	/>
+	<script type="application/x-javascript">
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- //Meta tags -->
+	<!-- Stylesheet -->
+	<link href="~/css/wickedpicker.css" rel="stylesheet" type='text/css' media="all" />
+	<link rel="stylesheet" href="~/css/jquery-ui.css" />
+	<link href="~/css/style.css" rel='stylesheet' type='text/css' />
+	<!-- //Stylesheet -->
+	<!--fonts-->
+	<link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700" rel="stylesheet">
+	<!--//fonts-->
+</head>
+
+<body>
+	<!--background-->
+	<h1> Catering Order Form </h1>
+	<div class="bg-agile"> 
+	<div class="book-appointment">
+			
+        <div class="book-agileinfo-form">
+    <form asp-action="Create" method="post">
+        <h2 class="sub-head-w3ls">Catering Order Form</h2>
+        <div class="main-agile-sectns">
+            <div class="agileits-btm-spc form-text1">
+                <input type="text" name="full_name" placeholder="Full Name" required>
+            </div>
+            <div class="agileits-btm-spc form-text2">
+                <input type="text" name="phone_number" placeholder="Phone number" required>
+            </div>
+        </div>
+        <div class="agileits-btm-spc form-text">
+            <input type="email" name="email" placeholder="Email" required>
+        </div>
+        <div class="main-agile-sectns">
+            <div class="agileits-btm-spc form-text1">
+                <input id="todays_date" name="todays_date" type="date" placeholder="Today's date" required>
+            </div>
+            <div class="agileits-btm-spc form-text2">
+                <input id="order_due_date" name="order_due_date" type="date" placeholder="Order due date" required>
+            </div>
+        </div>
+        <div class="main-agile-sectns">
+            <div class="agileits-btm-spc form-text1">
+                <input id="event_date" name="event_date" type="date" placeholder="Date of event" required>
+            </div>
+            <div class="agileits-btm-spc form-text2">
+                <input type="time" id="event_time" name="event_time" placeholder="Time of event" required>
+            </div>
+        </div>
+        <div class="main-agile-sectns">
+            <div class="agileits-btm-spc form-text1">
+                <input type="text" name="pickup_location" placeholder="Pick-up Location" required>
+            </div>
+            <div class="agileits-btm-spc form-text2">
+                <input type="text" name="event_type" placeholder="Type of event" required>
+            </div>
+        </div>
+        <div class="main-agile-sectns">
+            <div class="agileits-btm-spc form-text1">
+                <input type="number" name="number_of_guests" placeholder="Number of guests" required>
+            </div>
+            <div class="agileits-btm-spc form-text2">
+                <input type="time" name="pickup_time" placeholder="Pick up time" required>
+            </div>
+        </div>
+        <div class="wthree-text">
+            <h6>Delivery method</h6>
+            <ul class="radio-w3ls">
+                <li>
+                    <input type="radio" id="for_pickup" name="delivery_method" value="For Pick up" required>
+                    <label for="for_pickup">For Pick up</label>
+                    <div class="check"></div>
+                </li>
+                <li>
+                    <input type="radio" id="for_delivery" name="delivery_method" value="For Delivery" required>
+                    <label for="for_delivery">For Delivery</label>
+                    <div class="check">
+                        <div class="inside"></div>
+                    </div>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="clear"></div>
+    </form>
+</div>
+
+	
+
+		</div>
+		<div class="left-agileits-w3layouts-img">
+			<h3>What we provide you</h3>
+			<ul>
+				<li><span>.</span>24x7 Food service are available</li>
+				<li><span>.</span>Online Food Order booking</li>
+			
+				<li><span>.</span>Credit and debit card payment facility</li>
+			</ul>
+			
+		</div>
+		
+	</div>
+
+    <script type="text/javascript" src="~/js/jquery-2.2.3.min.js"></script>
+	<!-- Time -->
+    <script type="text/javascript" src="~/js/wickedpicker.js"></script>
+	<script type="text/javascript">
+		$('.timepicker').wickedpicker({
+			twentyFour: false
+		});
+	</script>
+	<!--// Time -->
+	<!-- Calendar -->
+	<script src="~/js/jquery-ui.js"></script>
+	<script>
+		$(function () {
+			$("#datepicker,#datepicker1,#datepicker2,#datepicker3").datepicker();
+		});
+	</script>
+	<!-- //Calendar -->
+
+</body>
+
+</html>
